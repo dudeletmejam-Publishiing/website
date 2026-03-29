@@ -5,94 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dude Let Me Jam Publishing | Asher GiOtis</title>
     <style>
-        /* BRAND COLORS */
+        /* DUDE LET ME JAM BRAND PALETTE */
         :root {
-            --bg: #0a0a0a;
+            --bg: #0d0d0d;
             --surface: #141414;
-            --accent: #8b0000; /* Deep Red - Adjust to match your logo exactly */
-            --text-main: #e5e5e5;
-            --text-dim: #888;
+            --accent: #a30000; /* Rich Red - Adjust to match your logo exactly */
+            --text-main: #f0f0f0;
+            --text-dim: #999;
         }
 
         body {
             background-color: var(--bg);
             color: var(--text-main);
-            font-family: 'Courier New', Courier, monospace; /* Emo/Typewriter vibe */
+            font-family: 'Courier New', Courier, monospace; /* Emo/Typewriter Vibe */
             margin: 0;
             display: flex;
             justify-content: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
-        .wrapper { max-width: 900px; width: 100%; }
+        .wrapper { max-width: 900px; width: 100%; text-align: center; }
 
+        /* BRANDING HEADER - STACKED */
         header {
-            border-bottom: 1px solid #333;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 30px;
+            margin-bottom: 50px;
         }
 
         .logo-img {
-            width: 80px; height: 80px;
-            border: 1px solid var(--accent);
-            filter: grayscale(100%); /* Keeps it moody */
+            width: 200px; /* BOLDER LOGO */
+            height: auto; /* MAINTAINS ASPECT RATIO */
+            margin-bottom: 20px;
         }
 
         h1 { 
-            font-size: 1.8rem; 
+            font-size: 2rem; 
             text-transform: uppercase; 
-            letter-spacing: 4px; 
+            letter-spacing: 6px; 
             margin: 0;
             color: #fff;
         }
 
-        .tagline { color: var(--accent); font-weight: bold; margin-top: 5px; }
+        .tagline { color: var(--accent); font-weight: bold; margin-top: 5px; font-size: 1.1rem; }
 
+        /* CONTENT GRID */
         .content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
+            text-align: left;
         }
 
         @media (max-width: 768px) { .content-grid { grid-template-columns: 1fr; } }
 
-        .about-section p { font-size: 1rem; line-height: 1.8; color: var(--text-dim); }
+        /* BIO SECTION */
+        .about-section p { font-size: 1rem; line-height: 1.9; color: var(--text-dim); }
 
+        /* SYNC CARD WITH YOUR PHOTO */
         .sync-card {
             background: var(--surface);
-            padding: 30px;
+            padding: 40px;
             border: 1px solid #222;
+        }
+
+        .signature-photo {
+            width: 100%; /* FILLS CARD WIDTH */
+            max-width: 300px; /* KEEPS IT FROM BEING GIGANTIC */
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
 
         .sync-card h3 { margin-top: 0; color: var(--accent); text-transform: uppercase; }
 
+        /* REPERTOIRE TABLE */
         .repertoire-table {
             width: 100%;
-            margin-top: 50px;
+            margin-top: 70px;
             border-collapse: collapse;
             font-size: 0.9rem;
+            text-align: left;
         }
 
-        .repertoire-table th { text-align: left; color: var(--accent); padding: 10px; border-bottom: 2px solid #222; }
-        .repertoire-table td { padding: 15px 10px; border-bottom: 1px solid #222; }
+        .repertoire-table th { text-align: left; color: var(--accent); padding: 12px; border-bottom: 3px solid #222; }
+        .repertoire-table td { padding: 18px 12px; border-bottom: 1px solid #222; }
 
+        /* ONE-STOP CALL TO ACTION */
         .btn {
             display: inline-block;
             background: none;
-            border: 1px solid var(--accent);
+            border: 2px solid var(--accent);
             color: var(--accent);
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-top: 20px;
-            transition: 0.3s;
+            transition: 0.3s ease;
+            font-weight: bold;
         }
 
-        .btn:hover { background: var(--accent); color: #fff; }
+        .btn:hover { background: var(--accent); color: #fff; transform: translateY(-2px); }
 
         footer { margin-top: 100px; font-size: 0.7rem; color: #444; text-transform: uppercase; letter-spacing: 2px; }
     </style>
@@ -100,12 +118,10 @@
 <body>
     <div class="wrapper">
         <header>
-    <img src="logo.png" alt="Dude Let Me Jam Logo" class="logo-img">
-    <div>
-        <h1>DUDE LET ME JAM</h1>
-        <div class="tagline">PUBLISHING & SYNC</div>
-    </div>
-</header>
+            <img src="logo.png" alt="Dude Let Me Jam Logo" class="logo-img">
+            <h1>DUDE LET ME JAM</h1>
+            <div class="tagline">PUBLISHING & SYNC</div>
+        </header>
 
         <div class="content-grid">
             <div class="about-section">
@@ -114,6 +130,7 @@
             </div>
 
             <div class="sync-card">
+                <img src="signature.jpg" alt="Asher GiOtis" class="signature-photo">
                 <h3>One-Stop Clearance</h3>
                 <p>We own 100% of the Master and Publishing rights. No red tape. Just music.</p>
                 <a href="mailto:dudeletmejampublishing@gmail.com" class="btn">Request License</a>
